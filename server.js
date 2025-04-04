@@ -95,7 +95,7 @@ app.use((err, req, res, next) => {
 });
 
 // API Route with additional error handling
-app.post('project1-production-0570.up.railway.app/find-roommates', async (req, res, next) => {
+app.post('/find-roommates', async (req, res, next) => {
     try {
         const name = req.body.name;
         const result = await findRoommates(name);
