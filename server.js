@@ -106,7 +106,7 @@ app.post('project1-production-0570.up.railway.app/find-roommates', async (req, r
 });
 
 // Serve HTML File
-app.get('project1-production-0570.up.railway.app', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
