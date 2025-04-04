@@ -4,11 +4,12 @@
   "description": "Roommate Finder Web Application",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js npm install cors "
+    "start": "node server.js"
   },
   "dependencies": {
     "csv-parser": "^3.0.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   },
   "engines": {
     "node": ">=14.0.0"
