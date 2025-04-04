@@ -2,11 +2,15 @@ const express = require('express');
 const fs = require('fs').promises;
 const csv = require('csv-parser');
 const path = require('path');
-
+const cors = require('cors');
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // Serve static files (HTML, CSS)
-
+app.use(cors({
+    origin: 'https://verdant-profiterole-9e05e2.netlify.app',  // your Netlify frontend URL
+    methods: ['POST', 'GET'],
+    credentials: true
+}));
 // File paths
 const csv1Path = path.join(__dirname, 'GpaData.csv');
 const csv2Path = path.join(__dirname, "AttachmentHUM_1071_-_08-2025.csv");
