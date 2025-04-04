@@ -1,5 +1,5 @@
 const express = require('express');
-const fs = require('fs').promises;
+const fs = require('fs');
 const csv = require('csv-parser');
 const path = require('path');
 const cors = require('cors');
