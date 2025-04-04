@@ -95,7 +95,7 @@ app.use((err, req, res, next) => {
 });
 
 // API Route with additional error handling
-app.post('/find-roommates', async (req, res, next) => {
+app.post('project1.railway.internal/find-roommates', async (req, res, next) => {
     try {
         const name = req.body.name;
         const result = await findRoommates(name);
@@ -106,7 +106,7 @@ app.post('/find-roommates', async (req, res, next) => {
 });
 
 // Serve HTML File
-app.get('/', (req, res) => {
+app.get('project1.railway.internal/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
